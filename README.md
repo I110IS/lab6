@@ -8,15 +8,13 @@ Cómo generar PDFs, cargar archivos y manejar puntos geográficos.
 
 Ver la sección [preparar repositorio](https://github.com/I110IS/lab1/blob/master/README.md#preparar-repositorio)
 
-## Parte 1 - PDFs y archivos
+## Parte 1 - APIs
 
-1. Permitirle a un monstruo exportar uno de sus tweets.
-    1. Debe agregarse un botón en la vista de `tweets#show` que lleve al monstruo a exportar su tweet a PDF.
-1. Permitirle a un monstruo cargar una foto para su perfil.
-    1. Copiar la funcionalidad de crear/editar monstruos del laboratorio de formularios.
-    1. Actualizar el crear/editar monstruo para permitir cargar una foto.
-1. Mostrar la foto cargada en el paso anterior al lado izquierdo de cada tweet, en lugar del doodle.
-    1. Si el monstruo no tiene foto cargada, continuar mostrando el doodle que se muestra actualmente.
+Vamos a validar que los teléfonos de los monstruos sean válidos usando https://www.abstractapi.com/api/phone-validation-api#docs
+
+1. Crear una cuenta en https://app.abstractapi.com/users/signup?target=/api/phone-validation/pricing/select (elegir el plan gratuito)
+1. Guardar la API key en las credenciales de rails
+1. Actualizar la acción de crear y actualizar monstruos para que se valide que el teléfono sea válido y de Argentina. Si el teléfono no cumple con alguna de esas condiciones se deberá indicar al usuario con un mensaje de error que explique el motivo.
 
 ## Parte 2 - Puntos geográficos
 
